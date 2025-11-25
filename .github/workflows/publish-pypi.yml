@@ -64,8 +64,8 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         # Uses trusted publishing - no token needed if configured on PyPI
         # If not using trusted publishing, uncomment below and add PYPI_API_TOKEN secret
-        # with:
-        #   password: ${{ secrets.PYPI_API_TOKEN }}
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
 
   publish-testpypi:
     name: Publish to TestPyPI
@@ -90,5 +90,5 @@ jobs:
         with:
           repository-url: https://test.pypi.org/legacy/
           # If not using trusted publishing, uncomment below and add TEST_PYPI_API_TOKEN secret
-          # password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
 
